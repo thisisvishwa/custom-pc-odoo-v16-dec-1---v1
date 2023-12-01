@@ -1,0 +1,46 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Initial CPU Data -->
+        <record id="cpu_data_1" model="custom_pc_builder.cpu">
+            <field name="name">Intel Core i7</field>
+            <field name="cores">8</field>
+            <field name="clock_speed">3.6</field>
+            <field name="cache">12</field>
+        </record>
+
+        <!-- Initial GPU Data -->
+        <record id="gpu_data_1" model="custom_pc_builder.gpu">
+            <field name="name">NVIDIA GeForce RTX 3080</field>
+            <field name="vram">10</field>
+            <field name="clock_speed">1.71</field>
+            <field name="cuda_cores">8704</field>
+        </record>
+
+        <!-- Initial RAM Data -->
+        <record id="ram_data_1" model="custom_pc_builder.ram">
+            <field name="name">Corsair Vengeance LPX 16GB</field>
+            <field name="speed">3200</field>
+            <field name="capacity">16</field>
+            <field name="latency">16</field>
+        </record>
+
+        <!-- Initial Storage Data -->
+        <record id="storage_data_1" model="custom_pc_builder.storage">
+            <field name="name">Samsung SSD 970 EVO 1TB</field>
+            <field name="type">SSD</field>
+            <field name="capacity">1000</field>
+            <field name="speed">3500</field>
+        </record>
+
+        <!-- Initial Motherboard Data -->
+        <record id="motherboard_data_1" model="custom_pc_builder.motherboard">
+            <field name="name">ASUS ROG Strix Z390-E</field>
+            <field name="form_factor">ATX</field>
+            <field name="chipset">Z390</field>
+            <field name="ports">USB 3.1, HDMI, DisplayPort</field>
+        </record>
+    </data>
+</odoo>
+```

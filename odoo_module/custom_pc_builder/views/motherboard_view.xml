@@ -1,0 +1,59 @@
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Motherboard list view -->
+        <record id="view_motherboard_tree" model="ir.ui.view">
+            <field name="name">motherboard.tree</field>
+            <field name="model">custom_pc_builder.motherboard</field>
+            <field name="arch" type="xml">
+                <tree string="Motherboard">
+                    <field name="name"/>
+                    <field name="form_factor"/>
+                    <field name="chipset"/>
+                    <field name="ports"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Motherboard form view -->
+        <record id="view_motherboard_form" model="ir.ui.view">
+            <field name="name">motherboard.form</field>
+            <field name="model">custom_pc_builder.motherboard</field>
+            <field name="arch" type="xml">
+                <form string="Motherboard">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="form_factor"/>
+                            <field name="chipset"/>
+                            <field name="ports"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Motherboard action -->
+        <record id="action_motherboard" model="ir.actions.act_window">
+            <field name="name">Motherboards</field>
+            <field name="res_model">custom_pc_builder.motherboard</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Motherboard
+                </p>
+                <p>
+                    Here you can create and manage motherboards for the custom PC builder.
+                </p>
+            </field>
+        </record>
+
+        <!-- Motherboard menu item -->
+        <record id="menu_motherboard" model="ir.ui.menu">
+            <field name="name">Motherboards</field>
+            <field name="action" ref="action_motherboard"/>
+        </record>
+    </data>
+</odoo>
+```

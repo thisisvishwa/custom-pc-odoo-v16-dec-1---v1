@@ -1,0 +1,53 @@
+```xml
+<odoo>
+    <data>
+        <!-- Order tree view -->
+        <record id="view_order_tree" model="ir.ui.view">
+            <field name="name">order.tree</field>
+            <field name="model">custom.pc.builder.order</field>
+            <field name="arch" type="xml">
+                <tree string="Order">
+                    <field name="name"/>
+                    <field name="user_id"/>
+                    <field name="configuration_id"/>
+                    <field name="total_price"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Order form view -->
+        <record id="view_order_form" model="ir.ui.view">
+            <field name="name">order.form</field>
+            <field name="model">custom.pc.builder.order</field>
+            <field name="arch" type="xml">
+                <form string="Order">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="user_id"/>
+                            <field name="configuration_id"/>
+                            <field name="total_price"/>
+                            <field name="status"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Order action -->
+        <record id="action_orders" model="ir.actions.act_window">
+            <field name="name">Orders</field>
+            <field name="res_model">custom.pc.builder.order</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Order menu item -->
+        <record id="menu_orders" model="ir.ui.menu">
+            <field name="name">Orders</field>
+            <field name="action" ref="action_orders"/>
+            <field name="parent_id" ref="custom_pc_builder.menu_custom_pc_builder"/>
+        </record>
+    </data>
+</odoo>
+```
