@@ -1,0 +1,52 @@
+```xml
+<odoo>
+    <data>
+        <!-- User form view -->
+        <record id="view_user_form" model="ir.ui.view">
+            <field name="name">user.form</field>
+            <field name="model">custom.pc.builder.user</field>
+            <field name="arch" type="xml">
+                <form string="User">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="email"/>
+                            <field name="password"/>
+                        </group>
+                        <notebook>
+                            <page string="Configurations">
+                                <field name="configurations"/>
+                            </page>
+                            <page string="Orders">
+                                <field name="orders"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- User tree view -->
+        <record id="view_user_tree" model="ir.ui.view">
+            <field name="name">user.tree</field>
+            <field name="model">custom.pc.builder.user</field>
+            <field name="arch" type="xml">
+                <tree string="User">
+                    <field name="name"/>
+                    <field name="email"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- User action -->
+        <record id="action_user" model="ir.actions.act_window">
+            <field name="name">Users</field>
+            <field name="res_model">custom.pc.builder.user</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- User menu item -->
+        <menuitem id="menu_user" name="Users" parent="custom_pc_builder.menu_custom_pc_builder" action="custom_pc_builder.action_user"/>
+    </data>
+</odoo>
+```

@@ -1,0 +1,55 @@
+```xml
+<odoo>
+    <data>
+        <!-- GPU Form View -->
+        <record id="view_gpu_form" model="ir.ui.view">
+            <field name="name">gpu.form</field>
+            <field name="model">custom.pc.builder.gpu</field>
+            <field name="arch" type="xml">
+                <form string="GPU">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="vram"/>
+                            <field name="clock_speed"/>
+                            <field name="cuda_cores"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- GPU Tree View -->
+        <record id="view_gpu_tree" model="ir.ui.view">
+            <field name="name">gpu.tree</field>
+            <field name="model">custom.pc.builder.gpu</field>
+            <field name="arch" type="xml">
+                <tree string="GPU">
+                    <field name="name"/>
+                    <field name="vram"/>
+                    <field name="clock_speed"/>
+                    <field name="cuda_cores"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- GPU Action -->
+        <record id="action_gpu" model="ir.actions.act_window">
+            <field name="name">GPUs</field>
+            <field name="res_model">custom.pc.builder.gpu</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new GPU
+                </p>
+                <p>
+                    Here, you can create and manage GPUs for the Custom PC Builder.
+                </p>
+            </field>
+        </record>
+
+        <!-- GPU Menu -->
+        <menuitem id="menu_gpu" name="GPUs" parent="custom_pc_builder.menu_custom_pc_builder" action="custom_pc_builder.action_gpu"/>
+    </data>
+</odoo>
+```

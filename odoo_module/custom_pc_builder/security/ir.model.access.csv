@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_custom_pc_builder_cpu,custom_pc_builder.cpu,model_custom_pc_builder_cpu,base.group_user,1,1,1,1
+access_custom_pc_builder_gpu,custom_pc_builder.gpu,model_custom_pc_builder_gpu,base.group_user,1,1,1,1
+access_custom_pc_builder_ram,custom_pc_builder.ram,model_custom_pc_builder_ram,base.group_user,1,1,1,1
+access_custom_pc_builder_storage,custom_pc_builder.storage,model_custom_pc_builder_storage,base.group_user,1,1,1,1
+access_custom_pc_builder_motherboard,custom_pc_builder.motherboard,model_custom_pc_builder_motherboard,base.group_user,1,1,1,1
+access_custom_pc_builder_price,custom_pc_builder.price,model_custom_pc_builder_price,base.group_user,1,1,1,1
+access_custom_pc_builder_configuration,custom_pc_builder.configuration,model_custom_pc_builder_configuration,base.group_user,1,1,1,1
+access_custom_pc_builder_user,custom_pc_builder.user,model_custom_pc_builder_user,base.group_user,1,1,1,1
+access_custom_pc_builder_order,custom_pc_builder.order,model_custom_pc_builder_order,base.group_user,1,1,1,1

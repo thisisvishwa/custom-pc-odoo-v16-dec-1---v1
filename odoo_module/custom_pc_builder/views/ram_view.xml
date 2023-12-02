@@ -1,0 +1,55 @@
+```xml
+<odoo>
+    <data>
+        <!-- RAM Form View -->
+        <record id="view_ram_form" model="ir.ui.view">
+            <field name="name">ram.form</field>
+            <field name="model">custom.pc.builder.ram</field>
+            <field name="arch" type="xml">
+                <form string="RAM">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="speed"/>
+                            <field name="capacity"/>
+                            <field name="latency"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- RAM Tree View -->
+        <record id="view_ram_tree" model="ir.ui.view">
+            <field name="name">ram.tree</field>
+            <field name="model">custom.pc.builder.ram</field>
+            <field name="arch" type="xml">
+                <tree string="RAM">
+                    <field name="name"/>
+                    <field name="speed"/>
+                    <field name="capacity"/>
+                    <field name="latency"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- RAM Action -->
+        <record id="action_ram" model="ir.actions.act_window">
+            <field name="name">RAM</field>
+            <field name="res_model">custom.pc.builder.ram</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new RAM
+                </p>
+                <p>
+                    Here, you can create and manage RAM modules for the Custom PC Builder.
+                </p>
+            </field>
+        </record>
+
+        <!-- RAM Menu -->
+        <menuitem id="menu_ram" name="RAM" parent="custom_pc_builder.menu_custom_pc_builder" action="action_ram"/>
+    </data>
+</odoo>
+```

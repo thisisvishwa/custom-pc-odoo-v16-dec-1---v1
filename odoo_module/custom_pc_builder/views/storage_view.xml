@@ -1,0 +1,60 @@
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Storage form view -->
+        <record id="view_form_storage" model="ir.ui.view">
+            <field name="name">storage.form</field>
+            <field name="model">custom.pc.builder.storage</field>
+            <field name="arch" type="xml">
+                <form string="Storage">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="capacity"/>
+                            <field name="speed"/>
+                            <field name="type"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Storage tree view -->
+        <record id="view_tree_storage" model="ir.ui.view">
+            <field name="name">storage.tree</field>
+            <field name="model">custom.pc.builder.storage</field>
+            <field name="arch" type="xml">
+                <tree string="Storage">
+                    <field name="name"/>
+                    <field name="capacity"/>
+                    <field name="speed"/>
+                    <field name="type"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Storage action -->
+        <record id="action_storage" model="ir.actions.act_window">
+            <field name="name">Storage</field>
+            <field name="res_model">custom.pc.builder.storage</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Storage
+                </p>
+                <p>
+                    Click to start designing your custom storage.
+                </p>
+            </field>
+        </record>
+
+        <!-- Storage menu item -->
+        <record id="menu_storage" model="ir.ui.menu">
+            <field name="name">Storage</field>
+            <field name="action" ref="action_storage"/>
+            <field name="sequence" eval="2"/>
+        </record>
+    </data>
+</odoo>
+```

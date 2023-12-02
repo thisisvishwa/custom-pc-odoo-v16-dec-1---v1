@@ -1,0 +1,71 @@
+/* custom_pc_builder style.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.component-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.component-item {
+    flex: 0 0 calc(33.333% - 20px);
+    margin-bottom: 20px;
+}
+
+.component-item img {
+    width: 100%;
+    height: auto;
+}
+
+.component-details {
+    padding: 10px;
+}
+
+.price-details {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .component-item {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .component-item {
+        flex: 0 0 100%;
+    }
+}
+
+.order-history {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.order-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.order-item h3 {
+    margin: 0;
+}
+
+.order-item p {
+    margin: 5px 0;
+}
+
+.order-item .order-status {
+    font-weight: bold;
+    color: green;
+}

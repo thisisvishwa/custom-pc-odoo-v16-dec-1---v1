@@ -1,0 +1,58 @@
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Configuration form view -->
+        <record id="view_configuration_form" model="ir.ui.view">
+            <field name="name">configuration.form</field>
+            <field name="model">custom.pc.builder.configuration</field>
+            <field name="arch" type="xml">
+                <form string="Configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="cpu_id"/>
+                            <field name="gpu_id"/>
+                            <field name="ram_id"/>
+                            <field name="storage_id"/>
+                            <field name="motherboard_id"/>
+                        </group>
+                        <notebook>
+                            <page string="Price Details">
+                                <field name="price_id"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Configuration tree view -->
+        <record id="view_configuration_tree" model="ir.ui.view">
+            <field name="name">configuration.tree</field>
+            <field name="model">custom.pc.builder.configuration</field>
+            <field name="arch" type="xml">
+                <tree string="Configuration">
+                    <field name="name"/>
+                    <field name="cpu_id"/>
+                    <field name="gpu_id"/>
+                    <field name="ram_id"/>
+                    <field name="storage_id"/>
+                    <field name="motherboard_id"/>
+                    <field name="price_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Configuration action -->
+        <record id="action_configuration" model="ir.actions.act_window">
+            <field name="name">Configurations</field>
+            <field name="res_model">custom.pc.builder.configuration</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Configuration menu item -->
+        <menuitem id="menu_configuration" name="Configurations" parent="custom_pc_builder.menu_custom_pc_builder" action="action_configuration"/>
+    </data>
+</odoo>
+```
